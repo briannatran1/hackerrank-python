@@ -28,3 +28,28 @@ class Solution:
 # shift larger elem to right til correctly placed
 # decrement j
 # assign value of curr to next index
+
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        '''requirements:
+            - fn takes in list of ints
+            - do not use built-in fns
+            - O(n log(n)) time 
+            - return arr in ascending order
+        '''
+        n = len(nums)
+        for i in range(n):
+            for j in range(n - i - 1):
+                if nums[j] > nums[j + 1]:
+                    nums[j], nums[j + 1] = nums[j + 1], nums[j]
+
+        return nums
+
+
+# bubble sort:
+# iterate through arr used nested loops and swap numbers if necessary
+# largest number will keep going towards end of arr
+
+# iterate through nums using nested loops
+# if curr is greater than next,
+# swap elems
