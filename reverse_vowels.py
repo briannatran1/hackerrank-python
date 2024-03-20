@@ -3,7 +3,7 @@ class Solution:
         '''req:
             - reverse all vowels in str and return
         '''
-        # initialize vowels var
+        # create vowels set
         # turn str into list
         # 2 pointer method --> intialize left and right pointers
         # while left < right
@@ -11,7 +11,7 @@ class Solution:
         # if not, increment/decrement pointer
         # join list into str
         
-        vowels = 'aeiouAEIOU'
+        vowels = set('aeiouAEIOU')
         word = list(s)
         left = 0
         right = len(s) - 1
