@@ -14,6 +14,7 @@ class Solution:
         
         return reversed_word
 
+# 2nd solution
 class Solution:
     def reverseWords(self, s: str) -> str:
         '''req:
