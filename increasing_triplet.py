@@ -15,11 +15,11 @@ class Solution:
 
         first = second = float('inf')
         for n in nums:
-            if n <= first:
+            if n <= first: # always holds smallest value
                 first = n
             elif n <= second:
                 second = n
-            else:
+            else: # 3rd value is greater than second and first
                 return True
         
         return False
