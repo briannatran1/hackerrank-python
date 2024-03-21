@@ -2,6 +2,9 @@ class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         '''req: 
             - return bool if i < j < k and nums[i] < nums[j] < nums[k]
+
+            >>> [1,2,3,4,5]
+            True
         '''
         # initialize 2 vars to infinity
         # iterate through num
