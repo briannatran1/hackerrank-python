@@ -23,6 +23,7 @@ class Solution:
         left = 0
         right = len(nums) - 1
         operations = 0
+        remaining_nums = []
 
         while left < right:
             if nums[left] + nums[right] == k:
@@ -32,6 +33,16 @@ class Solution:
             elif nums[left] + nums[right] < k:
                 left += 1
             else: 
+                remaining_nums.append(nums[right])
                 right -= 1
         
+        # add the remaining elements from the right pointer to the remaining_nums list
+        while right >= left:
+            remaining_nums.append(nums[right])
+            right -= 1
+
+        # replace the original nums list with the remaining elements
+        nums[:] = remaining_nums
+        
+        return operations
         return operations
