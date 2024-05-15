@@ -28,4 +28,5 @@ class Solution:
                     k += 1
                 left += 1
 
+        # +1 includes both endpoints
         return right - left + 1
