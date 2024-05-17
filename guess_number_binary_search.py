@@ -23,6 +23,8 @@ class Solution:
         last = n
 
         while first <= last:
+            # faster than // 2
+            # mid = (first + last) >> 1 
             mid = (first + last) // 2
             result = guess(mid)
 
