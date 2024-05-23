@@ -1,29 +1,36 @@
 class MinStack:
-    '''req:
-        - O(1) time
-    '''
 
     def __init__(self):
+        # initialize a regular stack and a min_stack (for min elems)
         self.stack = []
         self.min_stack = []
 
     def push(self, val: int) -> None:
-        ''' pushes val onto stack'''
+        '''pushes val onto stack'''
+        # push val onto reg stack
+        # if min_stack is not empty, assign val to lowest val of val or last val in min_stack
+        # add val to min_stack
         self.stack.append(val)
-        if not self.min_stack or val <= self.min_stack[-1]:
-            self.min_stack.append(val)
+        if self.min_stack:
+            val = min(val, self.min_stack[-1])
+        
+        self.min_stack.append(val)
 
+        
     def pop(self) -> None:
-        '''removes element on top of stack'''
-        if self.stack.pop() == self.min_stack[-1]:
-            self.min_stack.pop()
+        '''pops value from stack'''
+        # pop off val from reg stack and min_stack
+        self.stack.pop()
+        self.min_stack.pop()
 
     def top(self) -> int:
-        '''gets top elem of stack'''
+        '''return top elem in reg stack'''
+        # return last elem in stack
         return self.stack[-1]
 
     def getMin(self) -> int:
-        '''gets min element in stack'''
+        '''returns min val in stack'''
+        # return last elem in min_stack
         return self.min_stack[-1]
 
 
