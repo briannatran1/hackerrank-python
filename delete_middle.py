@@ -21,6 +21,8 @@ class Solution:
         # set prev.next to head 
         # initialize fast and slow pointers
         # traverse LL using 2 pointer technique
+        # by the time fast reaches the end of the list, 
+        # slow will be at the node just before the middle node
         if not head:
             return None
         
