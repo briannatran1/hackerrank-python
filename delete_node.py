@@ -20,6 +20,12 @@ class Solution:
         # else, root has one child or no child
         # if root has only one child, replace root w/ that child
         # else, root has 2 children
+        # find min (keep going left) from right subtree
+        # create node var and set to right child
+        # while there is still a left child, find deepest left child
+        # set root val to deepest left child
+        # recursively delete replaced node
+        # return root
         if not root: # base case
             return None
 
